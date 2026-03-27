@@ -47,3 +47,33 @@ pip install streamlit transformers langchain-huggingface langchain-core
 
 5. Run the application
 streamlit run app.py
+```
+
+🎮 Usage
+Note on the first run: You will need Wi-Fi ON the very first time you run the script so it can download the ~2.6GB model from Hugging Face. Once it says "Model loaded and ready!", you can turn off your Wi-Fi forever.
+
+Run the Streamlit UI
+To launch the interactive chat application:
+
+```Bash
+streamlit run offline_ui.py
+This will open a local web server at http://localhost:8501.
+```
+
+If you prefer a pure hacker terminal experience, you can run the core engine directly:
+
+```Bash
+python offline_coder.py
+```
+
+📁 Project Structure
+offline_coder.py: The core backend class that initializes the Hugging Face pipeline, forces it onto the GPU (device=0), and sets up the LangChain Prompt Templates.
+
+offline_ui.py: The frontend Streamlit application that handles the chat interface, caches the heavy model into memory, and manages conversation history.
+
+🤝 Acknowledgments
+Built by Kavya Agrawal
+
+Powered by open-source models from DeepSeek and the Hugging Face ecosystem.
+
+Guided by LangChain framework concepts.
