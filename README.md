@@ -42,8 +42,9 @@ source venv/bin/activate
 ⚠️ Important: Do NOT use pip install torch (it installs CPU version)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
-4. Install remaining dependencies
-pip install streamlit transformers langchain-huggingface langchain-core
+4. Install remaining dependencies from requirements.txt
+
+pip install -r requirements.txt
 
 5. Run the application
 streamlit run app.py
